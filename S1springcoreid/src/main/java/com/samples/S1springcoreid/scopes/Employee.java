@@ -1,4 +1,4 @@
-package com.samples.S1springcoreid;
+package com.samples.S1springcoreid.scopes;
 
 import org.springframework.beans.factory.annotation.Required;
 

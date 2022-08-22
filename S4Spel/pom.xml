@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.samples</groupId>
-	<artifactId>S01springcoredi</artifactId>
+	<artifactId>S4Spel</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>S01springcoredi</name>
+	<name>S4Spel</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -29,13 +29,6 @@
 			<artifactId>spring-context</artifactId>
 			<version>${springframework.version}</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.annotation/javax.annotation-api -->
-		<dependency>
-			<groupId>javax.annotation</groupId>
-			<artifactId>javax.annotation-api</artifactId>
-			<version>1.3.2</version>
-		</dependency>
-
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

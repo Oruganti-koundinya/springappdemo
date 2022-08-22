@@ -1,4 +1,4 @@
-package com.samples.S1springcoreid;
+package com.samples.S1springcoreid.constructor;
 
 import org.springframework.beans.factory.annotation.Required;
 
@@ -8,27 +8,12 @@ public class Employee {
 	private String name;
 	private Address address;
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
+	public Employee(int id, String name, Address address) {
 		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	
-	@Required
-	public void setName(String name) {
 		this.name = name;
-	}
-	
-	public Address getAddress() {
-		return address;
-	}
-	public void setAddress(Address address) {
 		this.address = address;
 	}
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", address=" + address + "]";

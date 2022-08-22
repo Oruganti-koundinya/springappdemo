@@ -8,7 +8,14 @@
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean name="emp" class="com.samples.S1springcoreid.Employee" p:id = "22" p:name = "Jack The Sparrow"></bean>
+	<bean name="emp" class="com.samples.S1springcoreid.Employee"
+		p:id="22" p:name="Jack wilson">
+		<property name="address">
+			<bean class="com.samples.S1springcoreid.Address"
+				p:houseNumber="123" p:street="main street" p:city="NY" />
+		</property>
+	</bean>
+
 	<bean name="hospital" class="com.samples.S1springcoreid.Hospital">
 		<property name="name" value="Global Hospitals" />
 		<property name="departments">
@@ -28,18 +35,48 @@
 			</set>
 		</property>
 	</bean>
-	
-	<bean name="customer"
-		class="com.samples.S1springcoreid.Customer" p:id="37">
+
+
+	<bean name="customer" class="com.samples.S1springcoreid.Customer"
+		p:id="37">
 		<property name="products">
 			<map>
 				<entry key="100" value="IPhone" />
-				<entry key="200" value="Samsung" />
-				<entry key="300" value="Redmi" />
-				<entry key="400" value="Motorola" />
-				<entry key="500" value="Google" />
+				<entry key="200" value="Laptop" />
+				<entry key="300" value="Mobile" />
+				<entry key="400" value="Mouse" />
+				<entry key="500" value="Keyboard" />
 			</map>
 		</property>
 	</bean>
+
+	<bean name="countries"
+		class="com.samples.S1springcoreid.CountriesAndLanguages">
+		<property name="countryLanguages">
+			<props>
+				<prop key="USA">English</prop>
+				<prop key="Canada">French</prop>
+				<prop key="Germany">German</prop>
+				<prop key="Japan">Japanese</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean name="scores" class="com.samples.S1springcoreid.Scores"
+		p:math="80" p:physics="87" p:chemistry="76" />
+
+	<!-- <bean name="student" class="com.samples.S1springcoreid.Student"> <property 
+		name="scores"> <ref bean="scores" /> </property> </bean> -->
+
+	<!-- <bean name="student" class="com.samples.S1springcoreid.Student"> <property 
+		name="scores" ref="scores" /> </bean> -->
+
+	<bean name="student" class="com.samples.S1springcoreid.Student"
+		p:scores-ref="scores" />
+
+	<bean name="patient" class="com.samples.S1springcoreid.Patient"
+		p:id="11" />
+
+	<context:annotation-config />
 
 </beans>
