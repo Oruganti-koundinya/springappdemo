@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +13,6 @@
 
 	<form action="registeruser" method="post">
 		<pre>
-<!-- 		Id: <input type="text" name="id" />   -->
 		Name: <input type="text" name="name" />
 		Email: <input type="text" name="email" />
 		<input type="submit" name="Register" />
@@ -20,6 +20,11 @@
 	</form>
 	
 	<p><%= request.getAttribute("result") %></p>
-
+	<br/>
+	<ul>
+		<c:forEach var="user" items="${users}">
+			<li>${user.id} | ${user.name} | ${user.email}</li>
+		</c:forEach>
+	</ul>
 </body>
 </html>	
